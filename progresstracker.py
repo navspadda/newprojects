@@ -89,13 +89,17 @@ class entrytype():
                 dtfile.writelines('\n'+auto_list[2]+acti_done)
             elif ans2 == input_no:
                 print(acti_not_done)
-                dtfile.writelines('\n'+auto_list[2]+acti_not_done)   
-            elif user_choice == input_done:
+                dtfile.writelines('\n'+auto_list[2]+acti_not_done)
+            else:
+                print(try_again) 
+                
+            user_done = input(auto_list[3])
+            if user_done == input_done:
                 print(done_msgA)
                 dtfile.writelines('\n'+done_msgA)
                 break   
             else:
-                print(try_again)             
+                print(try_again)                        
 entrytype()
 dtfile.writelines('\n\n---------------------------End of Entry---------------------------\n\n')
 dtfile.close()
